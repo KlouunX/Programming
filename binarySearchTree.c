@@ -17,10 +17,10 @@ int posOfNum(Tree *root, int data);
 int main()
 {
 	int numArr[N], sNum, count = 0;
-        for(int i = 0; i <= N; i++) { numArr[i] = i+1;}
+        for(int i = 0; i <= N; i++) { numArr[i] = i+1; }
 	Tree *root = arrayToBST(numArr, 0, N-1);
 
-	printf("------------------- BFS ---------------------\n");
+	printf("------------------- BST ---------------------\n");
         printf("\nBulmak istediğiniz sayıyı giriniz: ");
         scanf("%d", &sNum);
         printf("\n");
@@ -57,7 +57,7 @@ int posOfNum(Tree *root, int data){
 Tree *arrayToBST(int arr[], int start, int end)
 {
 	if (start > end) return NULL;
-	int mid = (start + end)/2;
+	int mid = (start + end) / 2;
 
 	Tree *root = newNode(arr[mid]);
 	root -> left = arrayToBST(arr, start, mid-1);
