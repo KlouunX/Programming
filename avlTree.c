@@ -129,15 +129,13 @@ avl *leftRotate(avl *x)
 
 int getBalance(avl *N)
 {
-	if (N == NULL)
-		return 0;
+	if (N == NULL) return 0;
 	return height(N -> left) - height(N -> right);
 }
 
 avl *insert(avl *node, int key)
 {
-	if (node == NULL)
-		return(newNode(key));
+	if (node == NULL) return(newNode(key));
 
 	if (key < node -> key)
 		node -> left = insert(node -> left, key);
@@ -174,9 +172,9 @@ void preOrder(avl *root)
 {
     if(root != NULL)
     {
-        printf("%d ", root->key);
-        preOrder(root->left);
-        preOrder(root->right);
+        printf("%d ", root -> key);
+        preOrder(root -> left);
+        preOrder(root -> right);
     }
 }
 
